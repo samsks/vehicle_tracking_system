@@ -24,6 +24,32 @@
 			"omzPlugins": "https://github.com/z-shell/F-Sy-H https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-completions"
 		},
 		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode-remote.remote-wsl",
+				"ms-vscode-remote.remote-containers",
+				"ms-vscode.remote-repositories",
+				"github.remotehub",
+				"ms-azuretools.vscode-docker",
+				"prisma.prisma",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"humao.rest-client",
+				"eamodio.gitlens",
+				"github.vscode-pull-request-github",
+				"vivaxy.vscode-conventional-commits",
+				"streetsidesoftware.code-spell-checker",
+				"visualstudioexptteam.vscodeintellicode",
+				"github.copilot",
+				"github.vscode-github-actions",
+				"github.copilot-labs",
+				"github.copilot-chat",
+				"visualstudioexptteam.intellicode-api-usage-examples",
+				"streetsidesoftware.code-spell-checker-portuguese-brazilian"
+			]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
