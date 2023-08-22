@@ -10,5 +10,5 @@
   "files.autoSaveDelay": 1000,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "cSpell.words": ["inputtype"]
+  "cSpell.words": ["geocoded", "inputtype"]
 }
