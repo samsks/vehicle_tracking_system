@@ -57,6 +57,7 @@ export class RoutesService {
     });
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   update(id: number, updateRouteDto: UpdateRouteDto) {
     return `This action updates a #${id} route`;
   }
