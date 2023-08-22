@@ -46,8 +46,7 @@
 				"github.vscode-github-actions",
 				"github.copilot-labs",
 				"github.copilot-chat",
-				"visualstudioexptteam.intellicode-api-usage-examples",
-				"streetsidesoftware.code-spell-checker-portuguese-brazilian"
+				"visualstudioexptteam.intellicode-api-usage-examples"
 			]
 		}
 	}
