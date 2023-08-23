@@ -48,20 +48,36 @@ function NewRoutePage() {
     console.log(directionsData);
   }
   return (
-    <div>
-      <h1>Nova rota</h1>
-      <form
-        onSubmit={handleSearchPlaces}
-        style={{ display: "flex", flexDirection: "column" }}
-      >
-        <div>
-          <input id="source" type="text" placeholder="origen" />
-        </div>
-        <div>
-          <input id="destination" type="text" placeholder="destino" />
-        </div>
-        <button type="submit">Pesquisar</button>
-      </form>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        height: "100%",
+        width: "100%",
+      }}
+    >
+      <div>
+        <h1>Nova rota</h1>
+        <form
+          onSubmit={handleSearchPlaces}
+          style={{ display: "flex", flexDirection: "column" }}
+        >
+          <div>
+            <input id="source" type="text" placeholder="origen" />
+          </div>
+          <div>
+            <input id="destination" type="text" placeholder="destino" />
+          </div>
+          <button type="submit">Pesquisar</button>
+        </form>
+      </div>
+      <div
+        id="maps"
+        style={{
+          height: "100%",
+          width: "100%",
+        }}
+      ></div>
     </div>
   );
 }
