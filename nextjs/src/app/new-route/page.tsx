@@ -49,7 +49,20 @@ function NewRoutePage() {
     const directionsData: DirectionsResponseData & { request: any } =
       await directionsResponse.json();
 
-    console.log(directionsData);
+    map?.removeAllRoutes();
+
+    await map?.addRouteWithIcons({
+      routeId: "1",
+      startMarkerOptions: {
+        position: directionsData.routes[0].legs[0].start_location,
+      },
+      endMarkerOptions: {
+        position: directionsData.routes[0].legs[0].end_location,
+      },
+      carMarkerOptions: {
+        position: directionsData.routes[0].legs[0].start_location,
+      },
+    });
   }
   return (
     <div
