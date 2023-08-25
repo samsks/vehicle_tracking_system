@@ -102,7 +102,7 @@ function NewRoutePage() {
           style={{ display: "flex", flexDirection: "column" }}
         >
           <div>
-            <input id="source" type="text" placeholder="origen" />
+            <input id="source" type="text" placeholder="origem" />
           </div>
           <div>
             <input id="destination" type="text" placeholder="destino" />
@@ -120,7 +120,7 @@ function NewRoutePage() {
         )}
       </div>
       <div
-        id="maps"
+        id="map"
         style={{
           height: "100%",
           width: "100%",
