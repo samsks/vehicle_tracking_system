@@ -10,6 +10,12 @@
   "files.autoSaveDelay": 1000,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "cSpell.words": ["geocoded", "googlemaps", "inputtype", "nestjs"],
+  "cSpell.words": [
+    "geocoded",
+    "googlemaps",
+    "inputtype",
+    "nestjs",
+    "websockets"
+  ],
   "conventionalCommits.scopes": ["frontend", "backend"]
 }
