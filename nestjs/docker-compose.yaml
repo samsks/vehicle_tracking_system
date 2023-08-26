@@ -4,7 +4,7 @@ services:
   app_node:
     build: .
     ports:
-      - "3000:3000"
+      - '3000:3000'
     volumes:
       - .:/home/node/app
 
@@ -17,6 +17,9 @@ services:
       MONGODB_REPLICA_SET_MODE: primary
       MONGODB_REPLICA_SET_KEY: 123456
       MONGODB_DATABASE: nest
+
+  redis:
+    image: redis:7.0.8-alpine
 
 volumes:
   mongodb_data:
