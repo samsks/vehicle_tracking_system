@@ -1,6 +1,7 @@
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 import "./globals.css";
 import type { Metadata } from "next";
+import { Navbar } from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Sistema de Rastreabilidade de Veículos",
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
-        <ThemeRegistry>{children}</ThemeRegistry>
+        <ThemeRegistry>
+          <Navbar />
+          {children}
+        </ThemeRegistry>
       </body>
     </html>
   );
