@@ -2,22 +2,15 @@
 
 import { useEffect, useRef } from "react";
 import { useMap } from "../../hooks/useMap";
-import useSwr from "swr";
-import { fetcher } from "../../utils/http";
 import { Route } from "../../utils/model";
 import { socket } from "@/utils/socket-io";
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { Button, Typography } from "@mui/material";
+import { RouteSelect } from "@/components/RouteSelect";
 
 export function DriverPage() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const map = useMap(mapContainerRef);
-
-  const {
-    data: routes,
-    error,
-    isLoading,
-  } = useSwr<Route[]>("http://localhost:3000/routes", fetcher, {
-    fallbackData: [],
-  });
 
   useEffect(() => {
     socket.connect();
@@ -67,39 +60,25 @@ export function DriverPage() {
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        height: "100%",
-        width: "100%",
-      }}
-    >
-      <div>
-        <h1>Minha viagem</h1>
+    <Grid2 container sx={{ display: "flex", flex: 1 }}>
+      <Grid2 xs={2} px={2}>
+        <Typography variant="h6" textAlign={"center"} sx={{ mt: 1, p: 1 }}>
+          Rotas disponíveis
+        </Typography>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <select id="route">
-            {isLoading && <option>Carregando rotas...</option>}
-            {routes!.map((route) => (
-              <option key={route.id} value={route.id}>
-                {route.name}
-              </option>
-            ))}
-          </select>
-          <button type="submit" onClick={startRoute}>
+          <RouteSelect id="route" />
+          <Button
+            variant="contained"
+            onClick={startRoute}
+            fullWidth
+            sx={{ mt: 1 }}
+          >
             Iniciar a viagem
-          </button>
+          </Button>
         </div>
-      </div>
-      <div
-        id="map"
-        style={{
-          height: "100%",
-          width: "100%",
-        }}
-        ref={mapContainerRef}
-      ></div>
-    </div>
+      </Grid2>
+      <Grid2 id="map" xs={10} ref={mapContainerRef}></Grid2>
+    </Grid2>
   );
 }
 
