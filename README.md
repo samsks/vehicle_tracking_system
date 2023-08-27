@@ -110,9 +110,12 @@ Este projeto tem como base a imersão FullCycle 14
 
 ### Front-end
 
+- [Documentação do Front-end (Next.js)](./nextjs/README.md)
+
 
 ### Back-end
 
+- [Documentação do Back-end (Nest.js)](./nestjs/README.md)
 
 
 ## Considerações Finais
