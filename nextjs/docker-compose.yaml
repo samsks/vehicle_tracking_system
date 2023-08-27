@@ -7,3 +7,43 @@ services:
       - "3001:3000"
     volumes:
       - .:/home/node/app
+    environment:
+      - API_URL=http://172.24.240.1:3000 # Substitua 172.24.240.1 pelo endereço IP do host do WSL Windows, linux ou mac.
+
+# outra maneira é:
+
+# rodar o nest.js apenas com o node.js da máquina
+
+# rodar o next.js apenas com o node.js da máquina
+
+# rodar o mongodb com docker
+
+# opção 2
+
+#     extra_hosts:
+
+#       - "host.docker.internal:172.17.0.1"
+
+# Para linux ou mac: sudo vim /etc/hosts e colocar no arquivo a seguinte linha: 172.17.0.1 host.docker.internal
+# Para windows editar o arquivo: C:\Windows\System32\drivers\etc\hosts adicionando a seguinte linha: 127.0.0.1 host.docker.internal
+
+# 127.0.0.1 host.docker.internal
+
+# use o docker engine (não use o docker desktop)
+
+# Para Windows C:\Windows\system32\drivers\etc\hosts (editar bloco de notas como administrador)
+
+# opcão 3
+
+#     networks:
+
+#       - my-network
+
+# docker network create my-network
+
+# networks:
+
+#   my-network:
+
+#     external: true
+
